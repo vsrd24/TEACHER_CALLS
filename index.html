@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Campus Alert System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>📢 Campus Alert System</h1>
+
+<div class="card" id="teacherLogin">
+<h2>Teacher Login</h2>
+<input id="teacherId" placeholder="Teacher ID (T1001)">
+<button onclick="loginTeacher()">Login</button>
+<p id="teacherMsg"></p>
+</div>
+
+<div class="card" id="teacherPanel" style="display:none">
+<h2 id="teacherName"></h2>
+<button onclick="callAll()">Call All Students</button>
+<input id="studentLast4" placeholder="Last 4 digits">
+<button onclick="callOne()">Call One</button>
+<button onclick="clearCalls()">Clear Calls</button>
+<button onclick="logoutTeacher()">Logout</button>
+</div>
+
+<div class="card" id="studentLogin">
+<h2>Student Login</h2>
+<input id="studentNumber" placeholder="Student Number (1001)">
+<button onclick="loginStudent()">Login</button>
+<p id="studentMsg"></p>
+</div>
+
+<div class="card" id="studentPanel" style="display:none">
+<h2>Alerts</h2>
+<div id="alertBox">No alerts</div>
+<button onclick="logoutStudent()">Logout</button>
+</div>
+
+<div id="popupContainer"></div>
+<audio id="sound" src="notification.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

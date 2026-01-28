@@ -1,0 +1,8 @@
+{
+"name":"Campus Alert System",
+"short_name":"CampusAlert",
+"start_url":"index.html",
+"display":"standalone",
+"theme_color":"#0b84ff",
+"background_color":"#0b84ff"
+}
